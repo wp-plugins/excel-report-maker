@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Excel-report-maker
-Version: 0.1.1
-Description: post and postmeta values set to excel file
+Version: 0.1.2
+Description: set post and postmeta values to excel file
 Author: Eyeta Co.,Ltd.
 Author URI: http://www.eyeta.jp
 Plugin URI:
