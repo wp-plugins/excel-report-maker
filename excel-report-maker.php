@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Excel-report-maker
-Version: 0.1-alpha
+Version: 0.1
 Description: post and postmeta values set to excel file
 Author: Eyeta Co.,Ltd.
 Author URI: http://www.eyeta.jp
@@ -65,6 +65,8 @@ class excel_report_maker {
 
 		// ajax
 		add_action('wp_ajax_excel_report_create', array(&$this, 'ajax_excel_report_create_api'));
+		// nopriv
+		add_action('wp_ajax_nopriv_excel_report_create', array(&$this, 'ajax_nopriv_excel_report_create_api'));
 
 	}
 
@@ -72,7 +74,14 @@ class excel_report_maker {
 	 * ajax レポートExcel作成ダウンロード
 	 */
 	function ajax_excel_report_create_api() {
-		$this->excel_report_create( $_REQUEST['target_report_id'], $_REQUEST['target_post_id'] );
+		if(apply_filters('excel-report-current_user_can', true, $_REQUEST['target_report_id'], $_REQUEST['target_post_id'])) {
+			$this->excel_report_create( $_REQUEST['target_report_id'], $_REQUEST['target_post_id'] );
+		}
+	}
+	function ajax_nopriv_excel_report_create_api() {
+		if(apply_filters('excel-report-current_user_can', false, $_REQUEST['target_report_id'], $_REQUEST['target_post_id'])) {
+			$this->excel_report_create( $_REQUEST['target_report_id'], $_REQUEST['target_post_id'] );
+		}
 	}
 
 	/**
@@ -149,6 +158,9 @@ class excel_report_maker {
 				$sheet->setCellValue( $array_input_data['target_cell'], $val );
 			}
 		}
+
+		// その他データ・セット
+		$sheet = apply_filters('excel-report-before_save', $sheet, $report_post_id, $target_post_id );
 
 		// 保存
 		//$this->get_upload_path() . $filename
@@ -316,7 +328,7 @@ class excel_report_maker {
 		));
 		if($report_posts->have_posts()) {
 			$report_posts->the_post();
-			echo '<a href="' . admin_url( 'admin-ajax.php' ) . '?action=excel_report_create&target_report_id=' . get_the_ID() . '&target_post_id=' . $post_id . '" class="button button-primary">' . esc_html(get_the_title()) . '</a> ';
+			echo '<a href="' . $this->get_create_url(get_the_ID(), $post_id ) . '" class="button button-primary">' . esc_html(get_the_title()) . '</a> ';
 		}
 		wp_reset_postdata();
 
@@ -380,7 +392,7 @@ class excel_report_maker {
 			$report_posts->the_post();
 
 			$actions['excel_report_' . get_the_ID()] =
-				'<a href="' . admin_url( 'admin-ajax.php' ) . '?action=excel_report_create&target_report_id=' . get_the_ID() . '&target_post_id=' . $post->ID . '">' . esc_html(get_the_title()) . '</a>';
+				'<a href="' . $this->get_create_url(get_the_ID(), $post->ID ) . '">' . esc_html(get_the_title()) . '</a>';
 		}
 		wp_reset_postdata();
 
@@ -476,10 +488,21 @@ class excel_report_maker {
 		while($report_posts->have_posts()) {
 			$report_posts->the_post();
 
-				echo '<a href="' . admin_url( 'admin-ajax.php' ) . '?action=excel_report_create&target_report_id=' . get_the_ID() . '&target_post_id=' . $target_post_id . '" class="button button-primary">' . esc_html(get_the_title()) . '</a>';
+				echo '<a href="' . $this->get_create_url(get_the_ID(), $target_post_id ) . '" class="button button-primary">' . esc_html(get_the_title()) . '</a>';
 		}
 		wp_reset_postdata();
 
+	}
+
+	/**
+	 * レポートURLの生成
+	 *
+	 * @param $report_post_id
+	 * @param $target_post_id
+	 */
+	function get_create_url($report_post_id, $target_post_id) {
+
+		return admin_url( 'admin-ajax.php' ) . '?action=excel_report_create&target_report_id=' . $report_post_id . '&target_post_id=' . $target_post_id . '&dummy=' . date('YmdHis');
 	}
 
 	/**

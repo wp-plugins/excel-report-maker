@@ -32,6 +32,8 @@ One opensource libraries are included with this plugin (without changes)
 3. You can find new custom posttype 'Excel Reports'.
    Entry new Excel report.
 
+For basic usage, you can also have a look at the [plugin homepage](http://www.eyeta.jp/archives/1012).
+
 
 == Screenshots ==
 
