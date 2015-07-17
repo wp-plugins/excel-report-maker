@@ -1,0 +1,14 @@
+#excel_report_metabox_excel_report .tright { text-align: right; }
+
+#excel_report_metabox_excel_report fieldset { border-bottom: solid 1px #eee; padding: 1em 0;}
+#excel_report_metabox_excel_report fieldset label{ display: block; margin: 0 0 0.3em; }
+#excel_report_metabox_excel_report fieldset .elm{ box-sizing: border-box; padding-left: 1em;}
+#excel_report_metabox_excel_report fieldset .red { color: red; }
+#excel_report_metabox_excel_report fieldset .desc { margin: 0; }
+
+#excel_report_metabox_excel_report fieldset .tbl-datas { width: 100%; }
+#excel_report_metabox_excel_report fieldset .tbl-datas th {  }
+#excel_report_metabox_excel_report fieldset .tbl-datas td { text-align: center;}
+#excel_report_metabox_excel_report fieldset .tbl-datas td input[type="text"] { width: 100%; }
+#excel_report_metabox_excel_report fieldset .tbl-datas tr.excel-report-maker-template { display: none; }
+#excel_report_metabox_excel_report fieldset .error { color: red; border-color: red; }
