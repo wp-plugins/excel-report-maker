@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Excel-report-maker
-Version: 0.1
+Version: 0.1.1
 Description: post and postmeta values set to excel file
 Author: Eyeta Co.,Ltd.
 Author URI: http://www.eyeta.jp
@@ -581,7 +581,7 @@ class excel_report_maker {
 			'rewrite' => false,
 			'query_var' => false,
 
-			'supports' => array( 'title', 'custom-fields'/*, 'custom-fields'*/ ),
+			'supports' => array( 'title'/*, 'custom-fields'*/ ),
 		);
 		register_post_type( 'excel_report', $args );
 

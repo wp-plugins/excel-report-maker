@@ -1,0 +1,195 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Excel-report-maker\n"
+"POT-Creation-Date: 2015-07-17 15:06+0900\n"
+"PO-Revision-Date: 2015-07-17 15:06+0900\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: excel-report-maker.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: excel-report-maker.php:98
+msgid "Isn't excel report"
+msgstr ""
+
+#: excel-report-maker.php:105
+msgid "Isn't posttype for excel report"
+msgstr ""
+
+#: excel-report-maker.php:129
+msgid "Cant find target worksheet: "
+msgstr ""
+
+#: excel-report-maker.php:253
+msgid "Error: file upload failer : "
+msgstr ""
+
+#: excel-report-maker.php:290
+msgid "Error: mkdir failer : "
+msgstr ""
+
+#: excel-report-maker.php:294
+msgid "Error: create htaccess failer : "
+msgstr ""
+
+#: excel-report-maker.php:357 excel-report-maker.php:411
+#: excel-report-maker.php:425 excel-report-maker.php:437
+#: excel-report-maker.php:553 excel-report-maker.php:555
+msgid "Excel Reports"
+msgstr ""
+
+#: excel-report-maker.php:411 ui-option.php:65
+msgid "Excel Reports Setting"
+msgstr ""
+
+#: excel-report-maker.php:554
+msgid "Excel Report"
+msgstr ""
+
+#: excel-report-maker.php:556
+msgid "All Excel Reports"
+msgstr ""
+
+#: excel-report-maker.php:557
+msgid "Add New"
+msgstr ""
+
+#: excel-report-maker.php:558
+msgid "Add Excel Report"
+msgstr ""
+
+#: excel-report-maker.php:559
+msgid "Edit"
+msgstr ""
+
+#: excel-report-maker.php:560
+msgid "Edit Excel Report"
+msgstr ""
+
+#: excel-report-maker.php:561
+msgid "New Excel Report"
+msgstr ""
+
+#: excel-report-maker.php:562
+msgid "View"
+msgstr ""
+
+#: excel-report-maker.php:563
+msgid "View Excel Report"
+msgstr ""
+
+#: excel-report-maker.php:564
+msgid "Search Excel Report"
+msgstr ""
+
+#: excel-report-maker.php:565
+msgid "No Excel Reports found"
+msgstr ""
+
+#: excel-report-maker.php:566
+msgid "No Excel Reports found in Trash"
+msgstr ""
+
+#: excel-report-maker.php:567
+msgid "Parent Excel Report"
+msgstr ""
+
+#: ui-excel_report_metabox.php:42 ui-option.php:74
+msgid "Target Posttype"
+msgstr ""
+
+#: ui-excel_report_metabox.php:62
+msgid "Excel Template File"
+msgstr ""
+
+#: ui-excel_report_metabox.php:68
+msgid "Change"
+msgstr ""
+
+#: ui-excel_report_metabox.php:80
+msgid "Wordsheet Name"
+msgstr ""
+
+#: ui-excel_report_metabox.php:83
+msgid "If empty, then use first worksheet."
+msgstr ""
+
+#: ui-excel_report_metabox.php:87
+msgid "Add Column And Show in List"
+msgstr ""
+
+#: ui-excel_report_metabox.php:93
+msgid "Show in Row action"
+msgstr ""
+
+#: ui-excel_report_metabox.php:99
+msgid "Show in Edit Page"
+msgstr ""
+
+#: ui-excel_report_metabox.php:105
+msgid "Data Set To Cell"
+msgstr ""
+
+#: ui-excel_report_metabox.php:109
+msgid "Target Meta Key"
+msgstr ""
+
+#: ui-excel_report_metabox.php:110 ui-excel_report_metabox.php:122
+#: ui-excel_report_metabox.php:134
+msgid " to "
+msgstr ""
+
+#: ui-excel_report_metabox.php:111
+msgid "Target Cell( ex. A3 )"
+msgstr ""
+
+#: ui-excel_report_metabox.php:124 ui-excel_report_metabox.php:136
+msgid "Delete Row"
+msgstr ""
+
+#: ui-excel_report_metabox.php:145
+msgid "Add Row"
+msgstr ""
+
+#: ui-option.php:23
+msgid "Maybe Timeout"
+msgstr ""
+
+#: ui-option.php:69
+msgid "Global Setting"
+msgstr ""
+
+#: ui-option.php:89 ui-option.php:90
+msgid "Use ACF"
+msgstr ""
+
+#: ui-option.php:96
+msgid "Save"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Excel-report-maker"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "post and postmeta values set to excel file"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Eyeta Co.,Ltd."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.eyeta.jp"
+msgstr ""

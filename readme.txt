@@ -4,7 +4,7 @@ Donate link:
 Tags: excel, report, export
 Requires at least: 4.2.2
 Tested up to: 4.2.2
-Stable tag: 0.1
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,7 +32,7 @@ One opensource libraries are included with this plugin (without changes)
 3. You can find new custom posttype 'Excel Reports'.
    Entry new Excel report.
 
-For basic usage, you can also have a look at the [plugin homepage](http://www.eyeta.jp/archives/1012).
+For basic usage, you can also have a look at the [plugin homepage](http://www.eyeta.jp/archives/1040).
 
 
 == Screenshots ==
